@@ -3,8 +3,27 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
+}
+
+a {
+  border-radius: 10px;
+}
+
+a:link,
+a:visited {
+  background-color: #809192;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  background-color: rgb(104, 102, 102);
 }
 
 @media (prefers-reduced-motion: no-preference) {
