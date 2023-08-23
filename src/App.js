@@ -1,21 +1,25 @@
-import logo from "./logo.svg";
+import React from "react";
+import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
+import ServicesSection from "./components/ServicesSection";
 import "./App.css";
+import Parallax from "./components/Parallax";
+import { img1 } from "./imgs/images.helper";
 
 function App() {
-  const update = () => {
-    window.location.reload();
-  };
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Whirlpool Temperatur: 32 °C</p>
-        <p>Ziel Temperatur: 38 °C</p>
-        <a href="/" className="App-button" onClick={update}>
-          Aktualisieren
-        </a>
-      </header>
+      <Header />
+      <HeroSection />
+      <ServicesSection />
+      <Parallax imgName={img1} minHeight={"40%"} />
+      <ServicesSection />
+      <Parallax imgName={img1} captionText={"DEN DURCHBLICK BEWAHREN"} />
+      <ServicesSection />
+
+      {/* <HeroSection />
+      <ServicesSection />
+      <HeroSection /> */}
     </div>
   );
 }

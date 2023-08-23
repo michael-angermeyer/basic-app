@@ -1,57 +1,201 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root,
 .App {
-  text-align: center;
+  height: 100%;
 }
 
-.App-logo {
-  height: 20vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, sans-serif;
 }
 
-a {
-  border-radius: 10px;
+/* Header Styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed; /* Fix the header at the top */
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Ensure the header is on top of other content */
 }
 
-a:link,
-a:visited {
-  background-color: #809192;
-  color: white;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a:hover,
-a:active {
-  background-color: rgb(104, 102, 102);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul {
+  list-style: none;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav ul li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffa500;
+}
+
+.parallax {
+  position: relative;
+  /* The image used */
+  /* background-image: url("./imgs/webdev-goggles.jpg"); */
+
+  /* Full height */
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.parallax-caption-text {
+  background-color: transparent;
+  font-size: 25px;
+  color: #f7f7f7;
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+/* Hero Section Styles */
+.hero {
+  position: relative;
+
+  background-image: url("./imgs/webdev-goggles.jpg");
+  /* opacity: 0.65; */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  /* padding: 250px 0; */
+  min-height: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  width: 100%;
+  /* max-width: 1040; */
+  margin: 0 auto;
+}
+
+.hero-text-animation {
+  animation: myAnim 2s ease-in 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    transform: scale(0);
+    transform-origin: 50% 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    transform: scale(1);
+    transform-origin: 50% 100%;
   }
 }
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: inline-block;
+  background-color: #ffa500;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff8c00;
+}
+
+/* Services Section Styles */
+.services {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 80px 0;
+  background-color: #fff0;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.service {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.service h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.service-animation {
+  animation: serviceAnim 2s ease-in 0s 1 normal forwards;
+}
+
+@keyframes serviceAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add more styles as needed */
